@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bela Blok</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <table id="blok">
+        <thead>
+            <tr>
+                <th><button type="button" id="open_modal" onclick="openModal()">+</button></th>
+                <th>Mi</th>
+                <th>Vi</th>
+            </tr>
+            <tr id="status_bar">
+                <th>#</th>
+                <th id="status_mi">0</th>
+                <th id="status_vi">0</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <div class="modal">
+        <div class="modal_data">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            <h3>Unos</h3>
+                            <button class="modal_close" id="modal_close" onclick="closeModal()">Close</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Zvanja: </td>
+                        <td><input type="number" id="zvanja" placeholder="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Tko je zvao: </td>
+                        <td>
+                            <label class="container">
+                                <input type="radio" checked="checked" name="zvao" value="mi">
+                                <span class="two">Mi</span>
+                            </label>
+
+                            <label class="container">
+                                <input type="radio" name="zvao" value="vi">
+                                <span class="two">Vi</span>
+                            </label>
+                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mi: </td>
+                        <td><input type="number" id="mi_ukupno" placeholder="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Vi: </td>
+                        <td><input type="number" id="vi_ukupno" placeholder="0"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button class="modal_save" id="modal_save">
+                                Save
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

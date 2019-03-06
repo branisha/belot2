@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    position: relative;
+    padding-top: 1%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#blok{
+    margin: auto;
+    min-width: 50%;
+    table-layout: fixed;
+    border-radius: 100%;
+    border-spacing: 0;
+}
+
+#blok thead tr th, #blok tbody tr td{
+    text-align: center;
+    height: 100%;
+    width: 30%;
+    border: solid 2px black;
+}
+
+#blok thead tr:first-child th:first-child{
+    width: 10%;
+    border-top-left-radius: 10px;
+    border-right-width: 0;
+}
+#blok thead tr th:first-child,#blok tbody tr td:first-child{
+    width: 10%;
+    border-right: 0;
+}
+#blok thead tr:first-child th:last-child{
+    border-top-right-radius: 10px;
+    border-left-width: 0;
+}
+#blok thead tr th:last-child, #blok tbody tr td:last-child{
+    border-left-width: 0;
+}
+
+#blok thead tr:not(:first-child) th, #blok tbody tr td{
+    border-top-width: 0;
+}
+
+#blok tbody tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+}
+#blok tbody tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+}
+
+#blok thead tr th{
+    background-color: teal;
+    color: white;
+}
+#blok tbody tr:nth-child(odd) td{
+    background-color: whitesmoke;
+}
+#blok tbody tr:nth-child(even) td{
+    background-color: wheat;
+}
+
+#open_modal{
+    height: 3rem;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+
+/* MODAL CLASSES */
+
+.modal{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+
+    display: none;
+}
+
+
+.modal .modal_data{
+    display: inline-block;
+    position: relative;
+    top: 3%;
+    border: 5px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    min-width: 35%;
+    max-width: 80%;
+}
+
+.modal .modal_data .modal_close{
+    position: absolute;
+    right: 5%;
+}
+.modal .modal_data .modal_save{
+    float: right;
+
+}
+.modal_data table{
+    table-layout: fixed;
+    margin: auto;
+}
+.modal_data table tr{
+    width: 100%;
+}
+
+.modal_data table tr th h3{
+    margin: 0;
+    float: left;
+}
+
+.modal_data table td input[type="number"]{
+    max-width: 100%;
+    font-size: 2rem;
+}
+
+.container {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+.two{
+    padding: 0.5em;
+    border: solid 1.5px black;
+    border-radius: 10px;
+}
+
+.container input:checked ~ .two{
+    color: wheat;
+    background-color: teal;
+}
+
+.container input:focus ~ .two{
+    border-color: blue;
+}
+  
+
+@media screen and (max-width: 768px){
+    body{
+        font-size: 3rem;
+    }
+    .modal{
+        font-size: 2rem;
+    }
+    .modal .modal_data table{
+        width: 90%;
+    }
+    #blok{
+        width: 95%
+    }
+}
+
