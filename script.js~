@@ -144,7 +144,7 @@ $(document).ready(function () {
             closeModal();
             str = JSON.stringify(game);
             console.log(game);
-            
+            Object.create
 
         }
 
