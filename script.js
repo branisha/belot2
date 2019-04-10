@@ -178,4 +178,13 @@ $(document).ready(function () {
     $("#mi_ukupno, #vi_ukupno").keyup(function () {
         updateGame(this);
     });
+
+    // was here for debug
+    // for(let i = 0; i < 10; i++){
+    //     $("#mi_ukupno").val(Math.floor(Math.random() * 162));
+    //     $("#vi_ukupno").val(Math.floor(Math.random() * 162)); 
+    //     $("#zvanja").val(0);
+    //     $("#modal_save").trigger("click");
+    // }
+
 });
